@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Service
 public class CountryService {
     private final RestTemplate restTemplate = new RestTemplate();
-    private static final String API_URL = "https://restcountries.com/v3.1/all";
+    private static final String API_URL = "https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags";
 
     @Cacheable("countries")
     @SuppressWarnings("unchecked")
